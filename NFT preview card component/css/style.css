@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "outfit", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #0D192C;
+    color: #8BACD9;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.card__img {
+    border-radius: 8px;
+}
+
+/* Typography */
+h1 {
+    color: #FFFFFF;
+    font-size: 1.375rem;
+    font-weight: 600;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00FFF8;
+}
+
+.card__title {
+    margin-top: 1.125rem;
+    margin-bottom: 0.75rem;
+}
+
+@media(min-width: 375px) {
+    .card__title {
+        margin-bottom: 1rem;
+    }
+}
+.card__currency,
+.card__date,
+.card__body {
+    margin-top: 0;
+}
+
+.card__body {
+    font-size: 1.125rem;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0.875rem;
+    line-height: 1.625;
+}
+
+@media(min-width: 375px) {
+    .card__body {
+        margin-bottom: 1rem;
+    }
+}
+
+.card__currency,
+.card__date,
+.card__author {
+    font-size: 0.9rem;
+}
+
+.card__author-title {
+    margin-left: 1em;
+    margin-top: 0.5em;
+}
+
+.card__currency,
+.card__date {
+    margin-bottom: 0;
+}
+
+.card__currency {
+    font-weight: 600;
+    color: #00FFF8;
+    align-self: center;
+}
+
+/* Layout */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 1.5em;
+}
+
+.flex {
+    display: flex;
+}
+
+/* card */
+.card {
+    max-width: 327px;
+    background-color: #15263F;
+    padding: 1.5em;
+    border-radius: 15px;
+}
+
+@media(min-width: 375px) {
+    .card {
+        max-width: 350px;
+    }
+}
+
+.card__primary-info {
+    justify-content: space-between;
+    border-bottom: 1px solid #2E405A;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
+
+@media(min-width: 375px) {
+    .card__primary-info {
+        padding-bottom: 1.5em;
+    }
+}
+
+.info-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.info-list__item:last-child {
+    margin-left: 0.4em;
+}
+
+/* image hover*/
+.image-container {
+    position: relative;
+    background-image: url("../images/nft-img.jpg");
+    height: 302px;
+    border-radius: 8px;
+    background-size: cover;
+}
+
+.card__hover-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 250ms ease;
+    opacity: 0;
+}
+
+.image-container:hover .card__hover-img {
+    opacity: 1;
+
+}
+
+.image-container:hover {
+    cursor: pointer;
+    background-image: linear-gradient(rgba(0, 255, 248, 0.5), rgba(0, 255, 248, 0.5)), url("../images/nft-img.jpg");;
+}
